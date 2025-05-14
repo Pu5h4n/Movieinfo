@@ -1,32 +1,34 @@
-/* Global */nhtml, body {n  background-color: #000 !important; /* Pure black for AMOLED */n  color: #fff;n  scroll-behavior: smooth;n}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MovieInfo – Details</title>
+  <!-- Bootswatch Cyborg -->
+  <link rel="stylesheet" href="https://bootswatch.com/5/cyborg/bootstrap.min.css">
+  <!-- Your custom AMOLED-friendly CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
 
-a {n  color: #4db5ff; /* Accent blue */n}
-a:hover {n  color: #82cfff;n}
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">MovieInfo</a>
+    </div>
+  </nav>
 
-/* Customize scrollbars */n::-webkit-scrollbar {n  width: 8px;n}
-::-webkit-scrollbar-track {n  background: #111; /* Dark track */n}
-::-webkit-scrollbar-thumb {n  background-color: #444; /* Dark thumb */n  border-radius: 4px;n  border: 2px solid #111;n}
+  <div class="container">
+    <div id="details"></div>
+  </div>
 
-/* Search form */n#searchForm input {n  background-color: #111;n  border: 1px solid #333;n  color: #fff;n}
-#searchForm input::placeholder {n  color: #777;n}
-
-/* Movie grid cards */n.card {n  background-color: #111; /* match dark container */n  border: 1px solid #333;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.card:hover {n  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
-}
-.card .card-title, .card .card-text {n  color: #fff;
-}
-
-/* Details page */n#details img {n  border: 2px solid #333;
-}
-
-/* Alerts */n.alert {n  background-color: #222;
-  border-color: #444;
-  color: #ffcc00;
-}
-
-/* Utility spacing */n.mt-4 { margin-top: 1.5rem !important; }
-.mb-4 { margin-bottom: 1.5rem !important; }
-.p-3 { padding: 1rem !important; }
+  <!-- jQuery, Axios, and your main JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+          integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+          crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    loadDetails(); // Calls the function in main.js to fetch & render
+  </script>
+</body>
+</html>
