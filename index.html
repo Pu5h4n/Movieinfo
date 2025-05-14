@@ -1,41 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MovieInfo</title>
-    <link rel="stylesheet" href="https://bootswatch.com/4/slate/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MovieInfo</title>
+  <!-- Bootswatch Cyborg for dark/amoled-friendly theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5/dist/cyborg/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <nav class="navbar navbar-default">
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="index.html">MovieInfo</a>
-            </div>
-        </div>
-    </nav>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">MovieInfo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+              aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <!-- Future nav items -->
+      </div>
+    </div>
+  </nav>
 
-    <div class="container">
-        <div class="jumbotron">
-            <h3 class="text-center">Search For Any Movie or TV Show</h3>
-            <form id="searchForm">
-                <input type="text" class="form-control" id="searchText" placeholder="Movie Name or TV Show">
-            </form>
-        </div>
+  <!-- Search Section -->
+  <div class="container mt-4">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <form id="searchForm" class="d-flex">
+          <input type="text" id="searchText" class="form-control me-2" placeholder="Search for movies or TV shows...">
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+      </div>
     </div>
 
-    <div class="container">
-        <div id="movies" class="row"></div>
-    </div>
+    <!-- Results will appear here -->
+    <div id="movies" class="row mt-4"></div>
+  </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="js/main.js"></script>
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+          integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
-
 </html>
