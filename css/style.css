@@ -1,13 +1,32 @@
-#movies img, #movie img{
-    width:90%;
-  }
-  
-  @media(min-width:1000px){
-    #movies .col-md-3 .well{
-      height: 390px;
-    }
-  
-    #movies .col-md-3 img{
-      height:280px;
-    }
-  }
+/* Global */nhtml, body {n  background-color: #000 !important; /* Pure black for AMOLED */n  color: #fff;n  scroll-behavior: smooth;n}
+
+a {n  color: #4db5ff; /* Accent blue */n}
+a:hover {n  color: #82cfff;n}
+
+/* Customize scrollbars */n::-webkit-scrollbar {n  width: 8px;n}
+::-webkit-scrollbar-track {n  background: #111; /* Dark track */n}
+::-webkit-scrollbar-thumb {n  background-color: #444; /* Dark thumb */n  border-radius: 4px;n  border: 2px solid #111;n}
+
+/* Search form */n#searchForm input {n  background-color: #111;n  border: 1px solid #333;n  color: #fff;n}
+#searchForm input::placeholder {n  color: #777;n}
+
+/* Movie grid cards */n.card {n  background-color: #111; /* match dark container */n  border: 1px solid #333;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {n  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+}
+.card .card-title, .card .card-text {n  color: #fff;
+}
+
+/* Details page */n#details img {n  border: 2px solid #333;
+}
+
+/* Alerts */n.alert {n  background-color: #222;
+  border-color: #444;
+  color: #ffcc00;
+}
+
+/* Utility spacing */n.mt-4 { margin-top: 1.5rem !important; }
+.mb-4 { margin-bottom: 1.5rem !important; }
+.p-3 { padding: 1rem !important; }
